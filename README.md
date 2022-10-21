@@ -1,13 +1,11 @@
-## Visual Named Entity Linking
+# Visual Named Entity Linking
 
-### Introduction
+EMNLP 2022(findings): Visual Named Entity Linking: A New Dataset and A Baseline
 
----
-The VNEL(Visual Named Entity Linking) takes an image as input, then recognize visual mentions with bounding boxes around and links them to the corresponding entities in the large Knowledge Base. As a named entity linking task, it transfers the scenario from the traditonal textual modality to the pure visual modality.
+## Introduction
+VNEL(Visual Named Entity Linking) takes an image as input, then recognize visual mentions with bounding boxes around and links them to the corresponding entities in the large Knowledge Base. As a named entity linking task, it transfers the scenario from the traditonal textual modality to the pure visual modality.
 
-### Sub-tasks
-
----
+## Sub-tasks
 
 ![VNEL](VNEL.png)
 
@@ -22,43 +20,42 @@ Generally, each entity is often characterized by rich textual and visual descrip
 
 **To participate in the VNEL leaderboard, please go here: https://jqhlgsxvmn.github.io/JQHlGSXvMN-github.io/**
 
-### Datasets
+## Datasets
 
-----
 WIKIPerson is a high-quality human-annotated visual person linking dataset focused on Visual Named Entity Linking. Unlike previously commonly-used datasets in entity linking, the mention in WIKIPerson is only an image containing the PERSON entity with its bounding box. The corresponding label identifies a unique entity in Wikipedia. As the most common entity type with relatively low annotating cost, we first focus our research on the PERSON type and use it as data V1.0. We will extend locations, yachts, and other more diverse types of the entity in the future.
 
 ![Process](Process.png)
 
 Notice that our dataset is labeled on the News-related dataset with diverse agencies such as USA TODAY, BBC, the Washington Post, and so on, which means the quality of the image is much higher than the image that is directly searched by search engine. 
 
-### Dataset Example
-
-------
+## Dataset Example
 
 The covered entity in the images is diverse with different occupations, ages, countries, and so on. Besides, it is also consistent with long-tail distribution which requires higher linking ability.
 
 ![Example](Example.png)
 
-### Getting Data
+## Getting Data
 
-------
-
-**To access our dataset, please refer to this** [WIKIPerson_Kaggle](https://kaggle.com/datasets/46400aa862be3e049a7dfc97e342a6bff6f45f695218a9a1e0ef7629dc989e37). A detailed elaboration on the data format and information can be viewed via the link. Notice there are much entity in the Large Knowledge Base are unseen in the input images, so a general Feature Extraction Model is desired in this task. 
+**To access our dataset, please refer to this** [WIKIPerson_Kaggle](). A detailed elaboration on the data format and information can be viewed via the link. Notice there are much entity in the Large Knowledge Base are unseen in the input images, so a general Feature Extraction Model is desired in this task. 
 
 |                 | *#Image* | *#Coverd Entity* | *#Knowledge Base* |
 | --------------- | -------- | ---------------- | ----------------- |
 | WIKIPerson_V1.0 | 48k      | 13K              | 120K              |
 
-### Legal Notices
-
-------
+## Legal Notices
 
 Any contributors grant you a license to the WIKIPerson Dataset and other content in this repository under the under the [MIT License](https://opensource.org/licenses/MIT), see the LICENSE.md file.
 
 Any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.
 
-### Citing
+## Citation
 
-------
-
-If you find our task/dataset useful, please consider citing it after the paper is accepted.
+If you find our work useful, please consider citing our paper:
+<!-- ```
+@article{chen2022corpusbrain,
+  title={CorpusBrain: Pre-train a Generative Retrieval Model for Knowledge-Intensive Language Tasks},
+  author={Chen, Jiangui and Zhang, Ruqing and Guo, Jiafeng and Liu, Yiqun and Fan, Yixing and Cheng, Xueqi},
+  journal={arXiv preprint arXiv:2208.07652},
+  year={2022}
+}
+``` -->
