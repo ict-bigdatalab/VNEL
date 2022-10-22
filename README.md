@@ -18,7 +18,8 @@ Generally, each entity is often characterized by rich textual and visual descrip
 - **V2VTEL**
   Both the visual description and the textual description of the entity in KB could be employed to link the visual mention. The V2VTEL task could leverage both textual and visual modality to complement each other in linking visual mentions.
 
-**To participate in the VNEL leaderboard, please go here: https://jqhlgsxvmn.github.io/JQHlGSXvMN-github.io/**
+**To participate in the VNEL leaderboard, please go here: 
+<!-- https://jqhlgsxvmn.github.io/JQHlGSXvMN-github.io/** -->
 
 ## Datasets
 
