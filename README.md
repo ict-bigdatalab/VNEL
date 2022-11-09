@@ -18,7 +18,7 @@ Generally, each entity is often characterized by rich textual and visual descrip
 - **V2VTEL**
   Both the visual description and the textual description of the entity in KB could be employed to link the visual mention. The V2VTEL task could leverage both textual and visual modality to complement each other in linking visual mentions.
 
-**To participate in the VNEL leaderboard, please go here: 
+** We also build a VNEL leaderboard and we will publish it later. 
 <!-- https://jqhlgsxvmn.github.io/JQHlGSXvMN-github.io/** -->
 
 ## Datasets
@@ -37,7 +37,7 @@ The covered entity in the images is diverse with different occupations, ages, co
 
 ## Getting Data
 
-**To access our dataset, please refer to this** [WIKIPerson_Kaggle](). A detailed elaboration on the data format and information can be viewed via the link. Notice there are much entity in the Large Knowledge Base are unseen in the input images, so a general Feature Extraction Model is desired in this task. 
+**To access our dataset, please refer to this** [WIKIPerson_Kaggle](https://www.kaggle.com/datasets 93a786232004244042464295be2cd68cd43a9dfa00b9d17d339b40171cfa6bdf). A detailed elaboration on the data format and information can be viewed via the link. Notice there are much entity in the Large Knowledge Base are unseen in the input images, so a general Feature Extraction Model is desired in this task. 
 
 |                 | *#Image* | *#Coverd Entity* | *#Knowledge Base* |
 | --------------- | -------- | ---------------- | ----------------- |
