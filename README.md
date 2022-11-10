@@ -60,9 +60,11 @@ If you find our work useful, please consider citing our paper:
   year={2022}
 }
 ``` -->
+```
 @article{VNEL,
   title = {Visual Named Entity Linking: A New Dataset and A Baseline},
   author = {Sun, Wenxiang and Fan, Yixing and Guo, Jiafeng and Zhang, Ruqing and Cheng, Xueqi},
   publisher = {arXiv},
   year = {2022}  
 }
+```
