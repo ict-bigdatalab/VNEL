@@ -2,7 +2,7 @@
  * @Author: swx6868752 swx6868752@163.com
  * @Date: 2022-11-10 14:50:32
  * @LastEditors: swx6868752 swx6868752@163.com
- * @LastEditTime: 2023-04-16 21:52:08
+ * @LastEditTime: 2023-04-16 22:10:30
  * @FilePath: /ChatgptInTable/Users/jerrysun/Downloads/VNEL-main/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,13 +18,14 @@ VNEL(Visual Named Entity Linking) takes an image as input, then recognize visual
 WIKIPerson is a high-quality human-annotated visual person linking dataset focused on Visual Named Entity Linking. Notice that our dataset is labeled on the News-related dataset with diverse agencies such as USA TODAY, BBC, the Washington Post, and so on, which means the quality of the image is much higher than the image that is directly searched by search engine. 
 
 ### Dataset Example
+----
 ![Example](Example.png)
 The dataset contains each image with the entity's bounding box and the corresponding wikidata id. released json data could be found on released _data folder. However, if you want to get access to the full image data, please check the following website.
 
 
 
 ### Getting Data
-
+----
 **To access our dataset, please refer to this on kaggle** [WIKIPerson_Kaggle](https://www.kaggle.com/datasets/93a786232004244042464295be2cd68cd43a9dfa00b9d17d339b40171cfa6bdf). A detailed elaboration on the data format and information can be viewed via the link. Notice there are much entity in the Large Knowledge Base are unseen in the input images, so a general Feature Extraction Model is desired in this task. 
 
 |                 | *#Image* | *#Coverd Entity* | *#Knowledge Base* |
@@ -32,6 +33,7 @@ The dataset contains each image with the entity's bounding box and the correspon
 | WIKIPerson_V1.0 | 48k      | 13K              | 120K              |
 
 ### Legal Notices
+----
 Any contributors grant you a license to the WIKIPerson Dataset and other content in this repository under the under the [MIT License](https://opensource.org/licenses/MIT), see the LICENSE.md file.
 
 Any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.
