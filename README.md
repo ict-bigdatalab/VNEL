@@ -2,7 +2,7 @@
  * @Author: swx6868752 swx6868752@163.com
  * @Date: 2022-11-10 14:50:32
  * @LastEditors: swx6868752 swx6868752@163.com
- * @LastEditTime: 2023-04-16 21:46:51
+ * @LastEditTime: 2023-04-16 21:52:08
  * @FilePath: /ChatgptInTable/Users/jerrysun/Downloads/VNEL-main/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -11,7 +11,7 @@ This repository contains the dataset and code for the EMNLP2022 paper Visual Nam
 
 ## Task introduction
 VNEL(Visual Named Entity Linking) takes an image as input, then recognize visual mentions with bounding boxes around and links them to the corresponding entities in the large Knowledge Base. As a named entity linking task, it transfers the scenario from the traditonal textual modality to the pure visual modality.
-![VNEL](VNEL.png)
+![VNEL Task](task.png)
 
 
 ## Dataset
