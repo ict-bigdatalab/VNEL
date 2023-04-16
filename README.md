@@ -1,70 +1,55 @@
+<!--
+ * @Author: swx6868752 swx6868752@163.com
+ * @Date: 2022-11-10 14:50:32
+ * @LastEditors: swx6868752 swx6868752@163.com
+ * @LastEditTime: 2023-04-16 21:46:51
+ * @FilePath: /ChatgptInTable/Users/jerrysun/Downloads/VNEL-main/README.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 # Visual Named Entity Linking
+This repository contains the dataset and code for the EMNLP2022 paper Visual Named Entity Linking: A New Dataset and A Baseline, which is the first large-scale visual input-oriented multimodal named entity linking dataset. The whole dataset contains over 48k annotated images based on 120k Wikipedia knowledge base.
 
-EMNLP 2022(findings): Visual Named Entity Linking: A New Dataset and A Baseline
-
-## Introduction
+## Task introduction
 VNEL(Visual Named Entity Linking) takes an image as input, then recognize visual mentions with bounding boxes around and links them to the corresponding entities in the large Knowledge Base. As a named entity linking task, it transfers the scenario from the traditonal textual modality to the pure visual modality.
-
-## Sub-tasks
-
 ![VNEL](VNEL.png)
 
-Generally, each entity is often characterized by rich textual and visual descriptions, and each modality of the description can provide sufficient information for visual entity linking. To make the task more clearly presented, we decompose the VNEL task into three sub-tasks(i.e., visual to visual entity linking (V2VEL), visual to textual entity linking (V2TEL), and visual to visual-textual entity linking (V2VTEL)) according to the type of description used in learning entity embeddings. 
 
-- **V2VEL**
-  Only the visual description of the entity in KB can be used in the visual entity linking stage. The core of V2VEL is to match two visual objects and some advanced CBIR methods could be adopted to test the performance. 
-- **V2TEL**
-  Only the textual description of the entity in KB can be used in the visual entity linking stage. The V2TEL task aims to evaluate the ability in image-text matching, central to cross-modal entity linking.
-- **V2VTEL**
-  Both the visual description and the textual description of the entity in KB could be employed to link the visual mention. The V2VTEL task could leverage both textual and visual modality to complement each other in linking visual mentions.
+## Dataset
+WIKIPerson is a high-quality human-annotated visual person linking dataset focused on Visual Named Entity Linking. Notice that our dataset is labeled on the News-related dataset with diverse agencies such as USA TODAY, BBC, the Washington Post, and so on, which means the quality of the image is much higher than the image that is directly searched by search engine. 
 
-We also build a VNEL leaderboard and we will publish it later. 
-<!-- https://jqhlgsxvmn.github.io/JQHlGSXvMN-github.io/** -->
-
-## Datasets
-
-WIKIPerson is a high-quality human-annotated visual person linking dataset focused on Visual Named Entity Linking. Unlike previously commonly-used datasets in entity linking, the mention in WIKIPerson is only an image containing the PERSON entity with its bounding box. The corresponding label identifies a unique entity in Wikipedia. As the most common entity type with relatively low annotating cost, we first focus our research on the PERSON type and use it as data V1.0. We will extend locations, yachts, and other more diverse types of the entity in the future.
-
-![Process](Process.png)
-
-Notice that our dataset is labeled on the News-related dataset with diverse agencies such as USA TODAY, BBC, the Washington Post, and so on, which means the quality of the image is much higher than the image that is directly searched by search engine. 
-
-## Dataset Example
-
-The covered entity in the images is diverse with different occupations, ages, countries, and so on. Besides, it is also consistent with long-tail distribution which requires higher linking ability.
-
+### Dataset Example
 ![Example](Example.png)
+The dataset contains each image with the entity's bounding box and the corresponding wikidata id. released json data could be found on released _data folder. However, if you want to get access to the full image data, please check the following website.
 
-## Getting Data
 
-**To access our dataset, please refer to this** [WIKIPerson_Kaggle](https://www.kaggle.com/datasets/93a786232004244042464295be2cd68cd43a9dfa00b9d17d339b40171cfa6bdf). A detailed elaboration on the data format and information can be viewed via the link. Notice there are much entity in the Large Knowledge Base are unseen in the input images, so a general Feature Extraction Model is desired in this task. 
+
+### Getting Data
+
+**To access our dataset, please refer to this on kaggle** [WIKIPerson_Kaggle](https://www.kaggle.com/datasets/93a786232004244042464295be2cd68cd43a9dfa00b9d17d339b40171cfa6bdf). A detailed elaboration on the data format and information can be viewed via the link. Notice there are much entity in the Large Knowledge Base are unseen in the input images, so a general Feature Extraction Model is desired in this task. 
 
 |                 | *#Image* | *#Coverd Entity* | *#Knowledge Base* |
 | --------------- | -------- | ---------------- | ----------------- |
 | WIKIPerson_V1.0 | 48k      | 13K              | 120K              |
 
-## Legal Notices
-
+### Legal Notices
 Any contributors grant you a license to the WIKIPerson Dataset and other content in this repository under the under the [MIT License](https://opensource.org/licenses/MIT), see the LICENSE.md file.
 
 Any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.
 
+## Model
+We can solve this task by dividing it into two parts, entity recall and entity disambiguation, based on named entity linking on traditional texts. The entity recall based on image similarity, and the entity disambiguation based on image entity context and entity meta information. Especially for current cross-modal models, we find that the capabilities at the fine-grained entity level are far from satisfactory. More information could be seen on [VNEL](https://aclanthology.org/2022.findings-emnlp.178/).
+![Model](model.png)
+
+
+
 ## Citation
 
 If you find our work useful, please consider citing our paper:
-<!-- ```
-@article{chen2022corpusbrain,
-  title={CorpusBrain: Pre-train a Generative Retrieval Model for Knowledge-Intensive Language Tasks},
-  author={Chen, Jiangui and Zhang, Ruqing and Guo, Jiafeng and Liu, Yiqun and Fan, Yixing and Cheng, Xueqi},
-  journal={arXiv preprint arXiv:2208.07652},
-  year={2022}
-}
-``` -->
 ```
-@article{VNEL,
-  title = {Visual Named Entity Linking: A New Dataset and A Baseline},
-  author = {Sun, Wenxiang and Fan, Yixing and Guo, Jiafeng and Zhang, Ruqing and Cheng, Xueqi},
-  publisher = {arXiv},
-  year = {2022}  
+@article{sun2022VNEL,
+  title={Visual Named Entity Linking: A New Dataset and A Baseline},
+  author={Sun, Wen  and Fan, Yixing  and Guo, Jiafeng  and Zhang, Ruqing  and Cheng, Xueqi},
+  journal={Findings of EMNLP 2022},
+  year={2022}
 }
 ```
